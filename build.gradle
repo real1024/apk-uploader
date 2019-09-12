@@ -1,10 +1,12 @@
 plugins {
     id 'groovy'
     id 'java'
+    id "com.gradle.plugin-publish" version "0.10.1"
+    id "java-gradle-plugin"
 }
 
 group 'com.shengsheng'
-version '1.0'
+version '1.2'
 
 sourceCompatibility = 1.8
 
@@ -22,4 +24,22 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpclient-cache:4.5.9'
     implementation 'org.apache.httpcomponents:fluent-hc:4.5.9'
     implementation 'org.json:json:20190722'
+}
+
+pluginBundle {
+    website = 'http://www.real-app.cn'
+    vcsUrl = 'http://www.real-app.cn'
+    tags = ['fir', 'apk', 'upload']
+}
+
+gradlePlugin {
+    plugins {
+        apkUploaderPlugin {
+            id = 'com.shengsheng.apk-uploader'
+            implementationClass = 'com.shengsheng.FirUploadPlugin'
+            displayName  = ' Apk uploader'
+            description = 'Upload apk to fir.'
+
+        }
+    }
 }

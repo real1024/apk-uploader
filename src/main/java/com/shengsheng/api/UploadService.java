@@ -35,7 +35,6 @@ public class UploadService implements CustomMultiPartEntity.ProgressListener {
     /**
      * 向FIR上传文件
      *
-     * @param url
      * @param filePath
      * @param apiToken
      * @param binary
