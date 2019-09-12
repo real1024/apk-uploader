@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'java'
+}
+
+group 'com.shengsheng'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation 'net.dongliu:apk-parser:2.6.9'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.11'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.9'
+    implementation 'org.apache.httpcomponents:httpmime:4.5.9'
+    implementation 'org.apache.httpcomponents:httpclient-cache:4.5.9'
+    implementation 'org.apache.httpcomponents:fluent-hc:4.5.9'
+    implementation 'org.json:json:20190722'
+}
