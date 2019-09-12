@@ -13,6 +13,6 @@ class UploadDebugTask extends BaseTask {
     @TaskAction
     void doAction() {
         new UploadWorker(project.extensions.apkUploader.debug.token,
-                FirUtils.getApkPath(true), "").upload()
+                FirUtils.getApkPath(project.buildDir, true), "").upload()
     }
 }

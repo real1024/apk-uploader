@@ -14,7 +14,7 @@ class AssembleUploadReleaseTask extends BaseTask {
     @TaskAction
     void doAction() {
         new UploadWorker(project.extensions.apkUploader.release.token,
-                FirUtils.getApkPath(false), "").upload()
+                FirUtils.getApkPath(project.buildDir, false), "").upload()
     }
 
 }

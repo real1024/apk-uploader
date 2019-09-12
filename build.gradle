@@ -6,7 +6,7 @@ plugins {
 }
 
 group 'com.shengsheng'
-version '1.2'
+version '1.3'
 
 sourceCompatibility = 1.8
 
@@ -14,16 +14,28 @@ repositories {
     mavenCentral()
 }
 
+configurations {
+    extraLibs
+}
+
 dependencies {
     implementation gradleApi()
     implementation localGroovy()
-    implementation 'net.dongliu:apk-parser:2.6.9'
-    implementation 'org.apache.httpcomponents:httpcore:4.4.11'
-    implementation 'org.apache.httpcomponents:httpclient:4.5.9'
-    implementation 'org.apache.httpcomponents:httpmime:4.5.9'
-    implementation 'org.apache.httpcomponents:httpclient-cache:4.5.9'
-    implementation 'org.apache.httpcomponents:fluent-hc:4.5.9'
-    implementation 'org.json:json:20190722'
+    extraLibs 'net.dongliu:apk-parser:2.6.9'
+//    extraLibs group: 'net.dongliu', name: 'apk-parser', version: '2.6.9'
+    extraLibs 'org.apache.httpcomponents:httpcore:4.4.11'
+    extraLibs 'org.apache.httpcomponents:httpclient:4.5.9'
+    extraLibs 'org.apache.httpcomponents:httpmime:4.5.9'
+    extraLibs 'org.apache.httpcomponents:httpclient-cache:4.5.9'
+    extraLibs 'org.apache.httpcomponents:fluent-hc:4.5.9'
+    extraLibs 'org.json:json:20190722'
+    configurations.compile.extendsFrom(configurations.extraLibs)
+}
+
+jar {
+    from {
+        configurations.extraLibs.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 pluginBundle {
