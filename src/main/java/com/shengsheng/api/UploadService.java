@@ -1,5 +1,8 @@
-package io.derl.fir.api;
+package com.shengsheng.api;
 
+import com.shengsheng.model.Binary;
+import com.shengsheng.model.CustomMultiPartEntity;
+import com.shengsheng.model.SearchFile;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -13,10 +16,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.nio.charset.Charset;
-
-import io.derl.fir.model.Binary;
-import io.derl.fir.model.CustomMultiPartEntity;
-import io.derl.fir.model.SearchFile;
 
 
 /**

@@ -1,8 +1,9 @@
-package io.derl.fir
+package com.shengsheng
 
-import io.derl.fir.extension.FirTokenPluginExtension
-import io.derl.fir.extension.VariantsTokenExtension
-import io.derl.fir.task.FirReleaseTask
+import com.shengsheng.extension.FirTokenPluginExtension
+import com.shengsheng.extension.VariantsTokenExtension
+import com.shengsheng.task.FirReleaseTask
+import com.shengsheng.task.FirDebugTask
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 

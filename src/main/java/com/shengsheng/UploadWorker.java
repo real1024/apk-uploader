@@ -1,7 +1,7 @@
-package io.derl.fir;
+package com.shengsheng;
 
-import io.derl.fir.api.UploadService;
-import io.derl.fir.model.Binary;
+import com.shengsheng.api.UploadService;
+import com.shengsheng.model.Binary;
 
 public class UploadWorker{
 

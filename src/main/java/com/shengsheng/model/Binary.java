@@ -1,4 +1,4 @@
-package io.derl.fir.model;
+package com.shengsheng.model;
 
 import net.dongliu.apk.parser.ApkFile;
 import net.dongliu.apk.parser.bean.ApkMeta;

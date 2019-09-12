@@ -1,4 +1,4 @@
-package io.derl.fir.extension
+package com.shengsheng.extension
 
 class VariantsTokenExtension {
 

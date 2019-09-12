@@ -1,4 +1,4 @@
-package io.derl.fir.model;
+package com.shengsheng.model;
 
 import org.apache.http.entity.mime.content.InputStreamBody;
 

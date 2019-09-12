@@ -1,5 +1,6 @@
-package io.derl.fir.api;
+package com.shengsheng.api;
 
+import com.shengsheng.model.UploadTicket;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -11,8 +12,6 @@ import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
-import io.derl.fir.model.UploadTicket;
 
 public class UploadToRio {
     public static final String FIR_UPLOAD_TOKEN_URL = "http://fir.im/api/v2/info/" ;

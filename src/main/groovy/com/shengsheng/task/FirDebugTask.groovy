@@ -1,5 +1,6 @@
-import io.derl.fir.UploadWorker
-import io.derl.fir.utils.FirUtils
+package com.shengsheng.task
+
+
 import org.gradle.api.DefaultTask
 import org.gradle.api.tasks.TaskAction
 
@@ -12,7 +13,7 @@ class FirDebugTask extends DefaultTask {
 
     @TaskAction
     void doAction() {
-        new UploadWorker(project.extensions.firUploader.debug.token,
-                FirUtils.getApkPath(true), "").upload()
+        new com.shengsheng.UploadWorker(project.extensions.firUploader.debug.token,
+                com.shengsheng.utils.FirUtils.getApkPath(true), "").upload()
     }
 }
